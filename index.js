@@ -21,16 +21,16 @@ data["relationships_following"].forEach(item => {
 });
 
 // main
-let goodpeople = [];
+let main_data = [];
 
 following.forEach(user => {
     if (followers.includes(user)) {
-        goodpeople.push(user);
+        main_data.push(user);
     }
 });
 
 following.forEach(user => {
-    if (!goodpeople.includes(user)) {
+    if (!main_data.includes(user)) {
         console.log(`https://www.instagram.com/${user}`);
     }
 });
